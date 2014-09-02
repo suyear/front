@@ -5,15 +5,73 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>W3C介绍</title>
-	<link rel="stylesheet" type="text/css" href="./style.css">
+	<style type="text/css">
+		body,div,p,a{margin: 0;padding: 0;}
+		#container{
+				width: 700px;
+				height: 750px;
+				position: relative;
+				margin: 0 auto;
+		}
+		#container p{
+			width: 580px;
+			bottom: 20px;
+			font-size: 14px;
+			line-height: 18px;
+			padding-bottom: 20px;
+			text-align: left;
+			text-indent: 2em;
+			font-family: "微软雅黑",Verdana,sans-serif;
+		}
+		p label{
+			color: red;
+		}
+	</style>
 </head>
 <body>
 	<div id="container">
+	<!--
 		<p>
 			W3C不是一个标准，而是一些列标准的集合，包含三个部分：结构标准、表现标准、动作标准。与结构标准对应代表语言是xHTML,与表现标准对应的代表语言是CSS，与动作标准对应的代表语言是JavaScript
 
 		</p>
+	-->
 
+		<p>
+			link:link就是把外部CSS与网页连接起来。
+
+		</p>	
+		<p>	
+			@import:import文字上与link的区别就是它可以把在一个CSS文件中引入其它几个CSS文件。
+		</p>	
+		<p>
+			为什么使用@import:大部分使用@import方式的人是因为旧的浏览器是不支持@import方式的,这意味着我们可以使用@import来引入只让现代浏览器解析的CSS样式.
+			另一个主要的原因就是当你的网页需要引入几个外部CSS文件时.你可以使用link引入一个CSS,然后在这个CSS文件中用@import方式引入其它几个CSS文件.这样看起来更容易管理.
+		</p>	
+		<p>
+			为什么使用link:
+			使用link方式一个最主要的原因就是你可以让用户切换CSS样式.现代浏览器如Firefox,Opera,Safari都支持<label>rel="alternate stylesheet"</label>属性(即可在浏览器上选择不同的风格),当然你还可以使用Javascript使得IE也支持用户更换样式.
+		</p>
+		<p>	
+			@import的小毛病:
+			如果你网页head标签里面十分简单,只有@import属性的话,当用户浏览的网速较慢时,他会看到一个没有风格样式的页面,然后随着CSS文件被下载完成才可以看到应有的风格.要避免这样的问题,你需要确保head里至少有一个script或是link标签.
+
+			<br/>
+			04-11更新:  @import会使得CSS整体载入时间变长.并且在IE中会导致文件下载次序被更改,例如放置在@import后面的script文件会在CSS之前被下载.
+		
+		</p>
+
+
+		<p>	
+			到底要用那种方式:
+			<label>就目前看来小型的网站还是使用link比较合适(或者说比较流行),当然如果将来我们需要把CSS进行模块化管理也肯定要用到@import.</label>
+
+		</p>
 	</div>
 </body>
 </html>
+
+
+<!--
+
+-->
