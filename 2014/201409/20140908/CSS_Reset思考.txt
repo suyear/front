@@ -1,0 +1,9 @@
+1. div标签默认有margin值吗？有padding值吗？怎么会想到应用div{margin:0; padding:0;}属性呢？真是画蛇添足，多此一举。
+2. dt标签有默认的margin与padding值就是0，这里为什么还要使用呢？
+3. li标签默认有margin值吗？有padding值吗？压根就没有，也不自己测测，还没事找事设置个li{margin:0; padding:0;}属性，真是衰！
+4. code标签是个属于inline水平的元素，居然也扯到margin与padding的重置，真是好笑。
+5. 还有，像form, input, button, textarea这样子的表单元素，有margin值吗？有padding值吗？我真是不解！
+6. fieldset, legend这两个90年代的标签你的网站上使用了吗？使用概率不足1%的标签也拿来重置，我实在无语了。
+7. 还有th，td这些标签，幸好没有写上table与tr标签，否则我一起痛批一段。
+在我看来，就算要CSS默认属性要reset重置，也应该如下：
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;}   ol,liul{margin:0; padding:0;}
