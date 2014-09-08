@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ 	<meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Line-Height</title>
+	<style type="text/css">
+
+		body {
+	        margin: 0;
+	        padding: 0;
+	        background: #1d1d1d;
+	        font-size: 10px;
+	        font-family: Verdana, Arial, Helvetica, sans-serif;
+		}
+		h1 {
+		        font: 4em Georgia, "Times New Roman", Times, serif;
+		        color: #fff;
+		        border-bottom: 5px dotted #999;
+		        margin: 0;
+		        padding: 0 0 10px;
+		}
+		h1 span {
+		        font-weight: bold;
+		        display:block;
+		        font-size:1.5em;
+		        color: #fff000;
+		}
+		p {
+		        font-size: 1.3em;
+		        color: #999;
+		}
+		strong {
+		        color: #fff;
+		}
+		.vert {
+		        width: 580px;
+		        height: 190px;
+		        position: absolute;
+		        top: 50%;
+		        left: 50%;
+		        margin: -95px 0 0 -290px;
+		}
+		.description{
+			margin: 0 auto;
+			text-indent: 2em;
+			width: 580px;
+			line-height: 20px;
+			font-size: 14px;
+		}
+		label{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="vert">
+        <h1>Hi, I'm<span>SuYear</span></h1>
+        <p>Abigo sudo mara paulatim odio, accumsan luptatum nibh nibh refero metuo opes ut fatua. Acsi et fere similis <strong>Using</strong> augue <strong>absolute</strong> validus. Regula <strong>positioning</strong> eu jus vel, indoles fere iaceo ea similis. Velit praemitto nulla vel luctus secundum. </p>
+	</div>
+
+	<p class="description">
+		CSS代码：
+		这种用绝对定位来实现的垂直居中，取决与元素的宽度和高度，你可以用下面这两个公式来计算元素的左边距和上边距
+
+		元素的宽度/2 = 负左边距
+		元素的高度/2 = 负上边距
+
+		<label>
+			border-bottom: 5px dotted #999;
+			可以在元素下面添加一条点虚线
+			
+		</label>
+		<label>
+			如果元素的外面还有一个父级元素,这时候，就必须在定义父级元素的CSS代码中加入position: relative;才能够使内部元素垂直居中于父级内部
+		</label>
+	</p>
+
+</body>
+</html>
+
+
+<!--
+
+-->
