@@ -1,0 +1,23 @@
+/*
+ * @description learn bootcss demo style
+ * @author enue
+ * @updated 2014-09-08 21:12:00
+ */
+
+/*Tencent Reset*/
+h1, h2, h3, h4, h5, h6{margin:0;}#finance h4, #car h4, #tech h4, #edu h4, #kid h4, #astro h4, #sports h4 {float:left;font-weight:200;height:20px;line-height:20px;margin-right:1px;overflow:hidden;padding-top:3px;text-align:center;width:73px;}
+
+#main{
+	margin: 0 auto;
+	padding: 0 auto;
+	width: 960px;
+}
+
+.header-des{
+	height: 100px;
+	margin-top: 40px;
+}
+
+.button-mod{
+	
+}

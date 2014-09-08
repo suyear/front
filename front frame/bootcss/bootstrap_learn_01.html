@@ -8,23 +8,58 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
     <![endif]-->
   </head>
   <body>
-    <h1>你好，世界！</h1>
 
     <div id="main">
+	    <div class="header-des">
+		    <h1>Bootcss学习</h1>
+		    <p>
+			    Bootcss学习部分，组件学习
+		    </p>
+	    </div>
     	
+    	<div id="button-mod">
+    		<h3>Buttons</h3>
+    		<p>
+    			<input type="button" class="btn btn-lg btn-default" value="default" />
+    			<input type="button" class="btn btn-lg btn-primary" value="private" />
+    			<input type="button" class="btn btn-lg btn-success" value="success" />
+    		</p>
+    	</div>
+
+    	<div id="other-mod">
+    		<div>
+    		<h3>Other</h3>
+    		<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEwMCIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEzcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjAweDIwMDwvdGV4dD48L3N2Zz4=" style="width: 200px; height: 200px;" />
+    		</div>
+
+    		<a href="#">Home <span class="badge">42</span></a>
+
+    		<div>
+    			<h3>Dropdown menus</h3>
+    			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		          <li class="active" role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+		          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+		          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+		          <li role="presentation" class="divider"></li>
+		          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+		        </ul>
+    		</div>
+    		
+    	</div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
