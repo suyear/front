@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }        
+        html{font-family: "Roboto",sans-serif;}
+        .section {margin: 70px 0px}
+        .section.second {
+            padding: 25px 0 20px 0;
+            margin: 0px;
+            background-color: #607d8b;
+        }
+        .section.second .btn {margin: 10px 0}
+        .section.second .status {
+            padding: 16px 0px;
+            color: white;
+            display: none
+        }
+        .section.second small {
+            display: block;
+            margin-top: 30px
+        }       
+        .container{
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            width: 900px;
+            max-width: 100%;
+        }        
+        .material-design .group.homepage {
+            width: 400px;
+            max-width: 100%;
+            margin: 0px
+        }
+        .material-design .group.homepage label {
+            top: 16px;
+            color: white
+        }
+        .material-design .group.homepage input {
+            background-color: #607d8b;
+            border-bottom: 1px solid white;
+            color: white
+        }
+        .material-design .group.homepage input:-webkit-autofill {-webkit-box-shadow: 0 0 0 50px #607d8b inset}
+        .material-design .group.homepage input:focus ~ label,.material-design .group.homepage input.used ~ label {
+            color: white;
+            top: -15px
+        }
+        .material-design .group.homepage .bar:before,.material-design .group.homepage .bar:after {background: white}
+        .material-design .group {
+            position: relative;
+            margin-bottom: 15px;
+            font-weight: 300
+        }
+        .material-design input {
+            background-color: #f0f0f0;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 100%;
+            border-radius: 0px;
+            border: none;
+            border-bottom: 1px solid #80d8ff
+        }
+        .material-design input:focus {outline: none}
+        .material-design label {
+            color: #757575;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 10px;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all
+        }
+        .material-design input:focus ~ label,.material-design input.used ~ label {
+            top: -15px;
+            font-size: 14px;
+            color: #80d8ff
+        }
+        .material-design input:-webkit-autofill {background-color: #f0f0f0}
+        .material-design .bar {
+            position: relative;
+            display: block;
+            width: 100%
+        }
+        .material-design .bar:before,.material-design .bar:after {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 1px;
+            position: absolute;
+            background: #80d8ff;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all
+        }
+        .material-design .bar:before {left: 50%}
+        .material-design .bar:after {right: 50%}
+        .material-design input:focus ~ .bar:before,.material-design input:focus ~ .bar:after {width: 50%}
+        .material-design .highlight {
+            position: absolute;
+            height: 60%;
+            width: 100px;
+            top: 25%;
+            left: 0;
+            pointer-events: none;
+            opacity: 0.5
+        }
+        .material-design input:focus ~ .highlight {
+            -webkit-animation: inputHighlighter 0.3s ease;
+            -moz-animation: inputHighlighter 0.3s ease;
+            animation: inputHighlighter 0.3s ease
+        }
+        @-webkit-keyframes inputHighlighter {
+            from {
+                background: #80d8ff
+            }
+            to {
+                width: 0;
+                background: transparent
+            }
+        }
+        @-moz-keyframes inputHighlighter {
+            from {
+                background: #80d8ff
+            }
+            to {
+                width: 0;
+                background: transparent
+            }
+        }
+        @keyframes inputHighlighter {
+            from {
+                background: #80d8ff
+            }
+            to {
+                width: 0;
+                background: transparent
+            }
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="second section">
+    <div class="container">
+        <div class="material-design">
+            <div class="group homepage">
+                <input class="start" type="email" required="required" name="email"></input>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Or, enter your email to try it out.*</label>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
