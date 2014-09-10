@@ -24,7 +24,7 @@
             span.glyphicon:hover{
                 cursor: pointer;
             }
-            ul li{
+            ul li.icon{
                 list-style: none;
                 width: 80px;
                 height: 80px;
@@ -34,13 +34,21 @@
                 display: inline-block;
             }
             
-            ul li:hover{
+            li.icon:hover{
                 background: #563d7c;
                 color: white;
             }
             #icon_modul span{
                 font-size: 48px;
                 line-height: 76px;
+            }
+            
+            div.mb-4{
+                margin-bottom: 40px;
+            }
+            
+            div.mt-2{
+                margin-top: 20px;
             }
         </style>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -52,38 +60,37 @@
     </head>
     <body>
         <div id="container">
+           
             <h3>图标模块</h3>
-            <div id="icon_modul">   
+            <div id="icon_modul" class="mb-4">   
                <ul>
-                   <li><span class="glyphicon glyphicon-asterisk" title="梅花图标"></span></li>
-                   <li><span class="glyphicon glyphicon-plus" title="plus"></span></li>
-                   <li><span class="glyphicon glyphicon-euro" title="euro"></span></li>
-                   <li><span class="glyphicon glyphicon-minus" title="minus"></span></li>
-                   <li><span class="glyphicon glyphicon-cloud" title="cloud"></span></li>
-                   <li><span class="glyphicon glyphicon-envelope" title="envelope"></span></li>
-                   <li><span class="glyphicon glyphicon-pencil" title="pencil"></span></li>
-                   <li><span class="glyphicon glyphicon-glass" title="glass"></span></li>
-               </ul>             
-                
+                   <li class="icon"><span class="glyphicon glyphicon-asterisk" title="梅花图标"></span></li>
+                   <li class="icon"><span class="glyphicon glyphicon-plus" title="plus"></span></li>
+                   <li class="icon"><span class="glyphicon glyphicon-euro" title="euro"></span></li>
+                   <li class="icon"><span class="glyphicon glyphicon-minus" title="minus"></span></li>
+                   <li class="icon"><span class="glyphicon glyphicon-cloud" title="cloud"></span></li>
+                   <li class="icon"><span class="glyphicon glyphicon-envelope" title="envelope"></span></li>
+                   <li class="icon"><span class="glyphicon glyphicon-pencil" title="pencil"></span></li>
+                   <li class="icon"><span class="glyphicon glyphicon-glass" title="glass"></span></li>
+               </ul>                             
             </div>
             
             <h3>下拉菜单</h3>
-            <div id="select_modul">   
-               <ul>
-                   <li><span class="glyphicon glyphicon-asterisk" title="梅花图标"></span></li>
-                  
-               </ul>             
-                
+            <div id="select_modul" class="dropdown mt-2">   
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle='dropdown' id="dropdownMenu1">
+                    Dropdown
+                    <span class="caret"></span>
+                </button>            
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Another Action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Something else here</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Seperated link</a></li>
+                </ul>
             </div>
             
-                    
-            
         </div>
-           
-        
-      
-      
-    
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
