@@ -26,15 +26,32 @@
             padding-left: 5px;
         }
         
+        .mt-2{
+            margin-top: 20px;
+        }
         
+        .ml-1{
+            margin-left: 10px;
+        }
+        
+        .ml-2{
+            margin-left: 20px;
+        }
+        
+        .red{
+            color: red;
+        }
+        .fwb{
+            font-weight: bold;
+        }
     </style>
 
 </head>
 <body>
-    <div id="container">
-        <h2>CSS Positioned Layout Module</h2>
-        <hr>
-        <div id="position">
+    <div id="container">        
+        <div id="position" class="mt-2">
+           <h2>CSS Positioned Layout Module</h2>
+            <hr>
             <table id="content">           
                 <tr>
                     <td>Properties属性</td>
@@ -85,6 +102,63 @@
                     <td>检索或设置对象的可视区域。区域外的部分是透明的</td>
             </tr>
         </table>
+        </div>
+        
+        <div id="position_module" class="mt-2">
+            <h2>Position module</h2>
+            <hr>
+            <h3 class="ml-1">语法：</h3>
+            <p class="ml-2">
+                <label>position: <span class="fwb">static | relative | absolute | fixed | center | page | sticky</span></label>
+            </p>
+            
+            <p class="ml-2">
+                <label>默认值：<span class="red fwb">static</span></label>
+            </p>
+
+            <p class="ml-2">
+                <label>适用于：除display属性定义为 <span class="fwb">table-column-group</span> 和 <span class="fwb">table-column</span>之外的所有元素</span></label>
+            </p>
+               
+            <p class="ml-2">
+                <label>继承性：无</label>
+            </p>
+            
+            <p class="ml-2">
+                <label>动画性：否</label>
+            </p>          
+            
+            <p class="ml-2">
+                <label>计算值：指定的值</label>
+            </p>  
+
+
+            <h3 class="ml-1">取值：</h3>
+            <p class="ml-2">
+                <label>static： 对象遵循常规流。top，right，bottom，left等属性不会被应用。</label>
+            </p>
+            
+            <p class="ml-2">
+                <label>relative： 对象遵循常规流，并且参照自身在常规流中的位置通过top，right，bottom，left属性进行偏移时不影响常规流中的任何元素。 </label>
+            </p>
+            
+            <p class="ml-2">
+                <label>absolute： 对象脱离常规流，使用top，right，bottom，left等属性进行绝对定位，盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。</label>
+            </p>
+            
+            <p class="ml-2">
+                <label>center： 对象脱离常规流，使用top，right，bottom，left等属性指定盒子的位置或尺寸大小。盒子在其包含容器垂直水平居中。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。（CSS3）</label>
+            </p>
+            
+            <p class="ml-2">
+                <label>page： 盒子的位置计算参照absolute。盒子在分页媒体或者区域块内，盒子的包含块始终是初始包含块，否则取决于每个absolute模式。（CSS3） </label>
+            </p>
+            
+            <p class="ml-2">
+                <label>sticky： 对象在常态时遵循常规流。它就像是 relative 和 fixed 的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如fixed。该属性的表现是现实中你见到的吸附效果。（CSS3） </label>
+            </p>
+            
+            
         </div>
     </div>              
         
