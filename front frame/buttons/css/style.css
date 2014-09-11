@@ -1,0 +1,38 @@
+/*
+ * @Description : Simple Layout And Css Code
+ * @Author : enue
+ * @Updated: 2014-09-11 15:46:00
+ */
+
+/*button-description*/
+#button-description{
+    height: 200px;
+}
+.abs-center p{
+    margin: 0 auto;
+    width: 960px; 
+    font-size: 40px;
+    padding-top: 30px;
+}
+.abs-center p.subtitle{
+    margin: 0 auto;
+    width: 960px; 
+    font-size: 20px;
+}
+
+/*part-one*/
+#button-part-one{
+    padding: 40px 0;
+}   
+div p{
+    margin: 0 auto;
+    width: 960px;
+}
+
+.p-4{
+    padding: 40px 0;
+}
+
+.p-3{
+    padding: 30px 0;
+}
