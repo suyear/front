@@ -27,9 +27,18 @@
             }
             
             .wik-button:hover{
-                border: 1px solid #909;                
+                border: 1px solid #000000;                
             }
-            
+            .block{
+                display: block;
+            }
+            .mb-2{
+                margin-bottom: 20px;
+            }
+            .wik-text{
+                line-height: 26px;
+                border: 1px solid #000000;
+            }
         </style>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +50,16 @@
     <body>
         <div id="container">
             <h1>Button</h1>
-            <input type="button" class="wik-button" value="Button"/>
+            <form action="">
+                <div class="mb-2">帐号：<input type="text" class="wik-text"/></div>
+                <div class="mb-2">密码：<input type="password" class="wik-text"/></div>
+                
+                <input type="button" class="wik-button" value="提交"/>
+                
+                
+            </form>
+            
+            
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
