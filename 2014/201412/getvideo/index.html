@@ -39,7 +39,7 @@
             <div class="col-sm-2"></div>
             <div class="col-sm-10">
                <div class="row">
-                    <img src="banner5.jpg" alt="" class="w100p" />
+                    <img id="youkuimg" alt="" />
                </div>
                <a href="javascript:;" class="cancel"><img class="w100p" src="lottery01.png" alt="关闭" /></a>
             </div>
@@ -47,7 +47,7 @@
         <div class="row mt20 video-content" style="display:none;">
             <div class="col-sm-2"></div>
             <div class="col-sm-10">
-                <textarea rows="5" class="w100p"></textarea>
+                <textarea rows="5" class="w100p" id="video-content"></textarea>
             </div>                        
         </div>
         <div class="row">
@@ -57,16 +57,51 @@
             </div>
         </div>
    </div>
+   <div id="youkuplayer" style="width:480px;height:400px"></div>
    <script>
     $('#videosrc').blur(function(){
         if($(this).val()){
-            $('.video-content,.video-player').slideDown();
-            $('.video-content').val('231313131');
+        	var youku_url=$("#videosrc").val();
+        	var youku_id=youku_url.substr(youku_url.indexOf("id_")+3,youku_url.indexOf(".html")-youku_url.indexOf("id_")-3);
+        	dealYouku(youku_id);
         }
     }); 
     $('.cancel').click(function(){
         $('.video-content,.video-player').slideUp();
     });
    </script>
+
+   <script type="text/javascript">
+   		//优酷
+   		function dealYouku(youku_id){
+	   		var _url="https://openapi.youku.com/v2/videos/show_basic.json";
+			var data={
+				'client_id':'bfb3ce3b2eb4aa01',
+				'video_id':youku_id,
+			}
+			$.get(_url,data,function(r){
+				if(r.state='encoding'){
+					var title=r.title;	
+					var publish=r.published;
+					var description=r.description;
+					var image=r.thumbnail;
+					$("#youkuimg").attr("src",image);
+					$('.video-content,.video-player').slideDown();	
+					$('#video-content').val(description);
+				}else{
+					alert("视频不正常");
+				}   				
+			});	
+   		}
+		
+   </script>
+
+   <script type="text/javascript" src="http://player.youku.com/jsapi">
+		/*player = new YKU.Player('youkuplayer',{
+			styleid: '0',
+			client_id: 'bfb3ce3b2eb4aa01',
+			vid: 'XODQ1NDk3OTI4'
+		});*/
+</script>
 </body>
 </html>
