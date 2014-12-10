@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>加载视频</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>    
+    <style>
+        .mt20{margin-top: 20px;}
+        .w100p{width: 100%;}
+        .hide{display: none;}
+        .posr{position: relative;}
+        .cancel{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+                <form class="form-horizontal mt20" role="form">
+                    <div class="form-group">
+                        <label for="videosrc" class="col-sm-2 control-label">视频地址：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="videosrc" placeholder="视频地址">
+                        </div>
+                    </div>
+                </form>
+        </div>
+        <div class="row video-player" style="display:none;">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+               <div class="row">
+                    <img src="banner5.jpg" alt="" class="w100p" />
+               </div>
+               <a href="javascript:;" class="cancel"><img class="w100p" src="lottery01.png" alt="关闭" /></a>
+            </div>
+        </div>
+        <div class="row mt20 video-content" style="display:none;">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+                <textarea rows="5" class="w100p"></textarea>
+            </div>                        
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+                
+            </div>
+        </div>
+   </div>
+   <script>
+    $('#videosrc').blur(function(){
+        if($(this).val()){
+            $('.video-content,.video-player').slideDown();
+            $('.video-content').val('231313131');
+        }
+    }); 
+    $('.cancel').click(function(){
+        $('.video-content,.video-player').slideUp();
+    });
+   </script>
+</body>
+</html>
